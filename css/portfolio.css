@@ -1,0 +1,757 @@
+/*IMPORTAMOS LETRA NUEVA*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+   text-decoration: none; 
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+p {
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.title span {
+    color: rgba(144, 241, 209, 0.874);
+}
+
+.low_title {
+    font-size: 2rem;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.low_title span {
+    color: rgba(144, 241, 209, 0.874);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 30px;
+    color: rgba(144, 241, 209, 0.874);
+    background-color: transparent;
+    border: 2px solid rgba(144, 241, 209, 0.874);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+.button:hover {
+    color: white;
+    background-color: rgba(144, 241, 209, 0.874);
+}
+
+.my_name h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.my_name h1 span {
+    color: rgba(144, 241, 209, 0.874);
+}
+
+
+
+
+/* HEADER */
+#header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw; /*para que ocupe toda la página*/
+    height: auto;
+}
+
+#header .header_container {
+    min-height: 8vh;
+    background-color: black;
+    
+}
+
+#header .header_container .my_name_brand h1 {
+    padding: 10px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+#header .header_container .my_name_brand h1 span {
+    color: rgba(144, 241, 209, 0.874);
+}
+
+#header .header_container .nav_bar .nav_list ul {
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+}
+
+#header .header_container .nav_bar .nav_list ul li {
+    display: inline-block;
+}
+
+#header .header_container .nav_bar .nav_list ul li a {
+    padding: 10px;
+    display: block;
+    font-size: 1.8rem;
+    color: white;
+}
+
+#header .header_container .nav_bar .nav_list ul li a:hover {
+    color: rgba(144, 241, 209, 0.874);
+}
+
+
+
+
+/* MAIN_PAGE (PORTADA) SECTION */
+#main_page {
+    /*no aparece la imagen
+    background-image: url('media/main_page.jpg');*/
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#main_page::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+
+#main_page .main_page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+#main_page h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1s;
+}
+
+#main_page h1:nth-child(1) {
+    animation-delay: 1s;
+}
+
+#main_page h1:nth-child(2) {
+    animation-delay: 2s;
+}
+
+#main_page h1:nth-child(3) {
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+}
+
+#main_page h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: rgba(144, 241, 209, 0.874);
+    animation: text_reveal_box 1s ease;
+    animation-delay: .5s;
+}
+
+#main_page h1:nth-child(1) span {
+    animation-delay: .5s;
+}
+
+#main_page h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+#main_page h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+
+
+
+/* ABOUT ME SECTION */
+#about_me .about_me{
+    flex-direction: column-reverse; /*para que la imagen pase abajo cuando se haga más pequeño*/
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+#about_me .about_me .my_image {
+    width: 250px;
+    height: 360px;
+    padding-top: 15px;
+}
+
+#about_me .about_me .my_image a{
+    color: black;
+}
+
+#about_me .about_me .my_image a:hover {
+    color: white;
+}
+
+#about_me .about_me .my_info {
+    width: 100%;
+}
+
+#about_me .about_me .my_info h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+
+#about_me .about_me .my_info p {
+    margin-bottom: 20px;
+}
+
+#about_me .about_me .my_info .button {
+    color: black;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+
+#about_me .about_me .my_info .skills .my_skills {
+    padding-top: 5px;
+    display: flex;
+    gap: 20px;
+    font-size: 3rem;
+    cursor: pointer;
+    justify-content: center;
+}
+
+i:hover:nth-child(1){
+    color: #e6842f;
+}
+
+i:hover:nth-child(2){
+    color: #5489c5;
+}
+
+.skills i:hover:nth-child(3){
+    color: #ea3b3b;
+}
+
+.skills i:hover:nth-child(4){
+    color: #ff8400;
+}
+
+
+
+
+/* PROJECTS SECTION */
+#projects .projects {
+    flex-direction: column;
+    max-width: 1200px;
+    margin:  0 auto;
+    padding: 100px 0;
+}
+
+#projects .projects .projects_header h1 {
+    margin-bottom: 50px;
+}
+
+#projects .projects .all_projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#projects .projects .all_projects .project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#projects .projects .all_projects .project .project_info {
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    color: white;
+}
+
+#projects .projects .all_projects .project .project_info h1 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+#projects .projects .all_projects .project .project_info h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+#projects .projects .all_projects .project .project_info p {
+    color: white;
+}
+
+#projects .projects .all_projects .project .project_img {
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+#projects .projects .all_projects .project .project_img::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: .7;
+}
+
+#projects .projects .all_projects .project .project_img img{
+    transition: .3 ease transform;
+}
+
+#projects .projects .all_projects .project:hover .project_img img {
+    transform: scale(1.1);
+}
+
+
+
+
+/* EDUCATION SECTION */
+#education .education {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#education .title_description {
+    width: 500px;
+    max-width: 0 auto;
+}
+
+#education .my_education {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+#education .my_education .education_trip {
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    /*no pone la imagen
+    background-image: url(media\school.jpg);*/
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#education .my_education .education_trip::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c, #485563 100%);
+    opacity: .9;
+    z-index: -1;
+}
+
+#education .my_education .education_trip .icon {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+#education .my_education .education_trip h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#education .my_education .education_trip p {
+    color: white;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+}
+
+
+
+
+/* CONTACT SECTION */
+#contact .contact {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#contact .contact .contacts {
+    width: 400px;
+}
+
+#contact .contact .contacts .contact_me {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+    transition: .3s ease box-shadow;
+    cursor: pointer;
+}
+
+#contact .contacts .contacts .contact_me:hover{
+    box-shadow: 0px 0px 5px 0 #0000002c;
+}
+
+#contact .contacts .icon {
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#contact .contacts .contact_me .contact_info h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#contact .contacts .contact_me .contact_info h2 {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+
+
+
+/* FOOTER */
+#footer {
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+#footer .footer {
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+#footer .footer h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#footer .footer .social_media{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#footer .footer .social_media .social_icon{
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+}
+
+#footer .footer .social_media .social_icon a {
+    filter: grayscale(1);
+    transition: .3s ease filter;
+}
+
+#footer .footer .social_media .social_icon a:hover {
+    filter: grayscale(0);
+}
+
+#footer .footer p {
+    color: white;
+    font-size: 1.3rem;
+}
+
+
+
+
+/* KEYFRAMES (TRANSICIONES)*/
+@keyframes text_reveal_box  {
+    50%{
+        width: 100%;
+        left: 0;
+    }
+
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100%{
+        color: white;
+    }
+}
+
+@keyframes text_reveal_name {
+    100%{
+        color: rgba(144, 241, 209, 0.874);
+        font-weight: 500;
+    }
+}
+
+
+
+
+/* PARA TABLET */
+@media only screen and (min-width: 768px) {
+    .button{
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+
+    h1.title{
+        font-size: 6rem;
+    }
+
+    /* HEADER */
+    #header .header_container .nav_bar .my_name_brand {
+        float: left;    
+    }
+
+    #header .header_container .nav_bar .nav_list ul {
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    /* MAIN_PAGE */
+    #main_page h1 {
+        font-size: 7rem;
+    }
+
+
+    /* ABOUT ME */
+    #about_me .about_me {
+        flex-direction: row;
+    }
+
+    #about_me .about_me .my_image {
+        width: 600px;
+        height: 400px;
+        padding-left: 60px;
+    }
+
+    #about_me .about_me .my_image image::after {
+        left: -45px;
+        top: 34px;
+        height: 98%;
+        width: 98%;
+        border: 10px solid rgba(144, 241, 209, 0.874);
+    }
+
+    #about_me .about_me .my_info {
+        text-align: left;
+        padding: 30px;
+    }
+
+    #about_me .about_me .my_info h1 {
+        text-align: left;
+    }
+
+    #about_me .about_me .my_info .skills .my_skills {
+        justify-content: flex-start;
+    }
+
+
+    /* PROJECTS */
+    #projects .projects .all_projects .project {
+        flex-direction: row;
+    }
+
+    #projects .projects .all_projects .project:nth-child(even) { /*pares*/
+        flex-direction: row-reverse;
+    }
+
+    #projects .projects .all_projects .project {
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #projects .projects .all_projects .project .project_info {
+        height: 100%;
+    }
+
+    #projects .projects .all_projects .project .project_img {
+        height: 100%;
+    }
+
+
+    /* EDUCATION */
+    #education .education .my_education .education_trip {
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+
+
+    /* CONTACT */
+    #contact .contact {
+        flex-direction: column;
+        padding: 100px 0;
+        align-items: center;
+        justify-content: center;
+        min-width: 20vh;
+    }
+
+    #contact .contact .contacts {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        margin: 0;
+    }
+
+    #contact .contact .contacts .contact_me {
+        margin: 20px;
+        flex-direction: row;
+    }
+
+    #contact .contact .contacts .contact_me .icon {
+        height: 100px;
+        width: 100px;
+    }
+
+    #contact .contact .contacts .contact_me .icon img {
+        object-fit: contain;
+    }
+
+    #contact .contact .contacts .contact_me .contact_info {
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+    }
+}
+
+/* PARA ORDENADORES */
+@media only screen and (min-width: 1200px) {
+
+    /* HEADER */
+    #header .header_container .nav_bar .my_name_brand {
+        float: left;    
+    }
+
+    #header .header_container .nav_bar .nav_list ul {
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    /* MAIN PAGE */
+    #about_me .about_me .my_info .skills .my_skills {
+        justify-content: flex-start;
+    }
+
+
+    /* EDUCATION */
+    #education .my_education .education_trip {
+        flex-basis: 22%;
+        margin: 1.5%;
+    }
+}
+
