@@ -9,7 +9,7 @@
 
         <!-- FONT AWESOME -->
         <script src="https://kit.fontawesome.com/6e711a598f.js" crossorigin="anonymous"></script>
-        <script src="js/portfolio.js"></script>
+        <script src="js/portfolio.js" defer></script>
     </head>
 
     <body>
@@ -250,8 +250,20 @@
                             <h1>Address</h1>
                             <h2>Orihuela, Alicante. Spain</h2>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
+                <!-- botón que me abre un formulario -->
+                <a href="#" type="button" class="button" id="formButton">Form</a>
+
+                <br><br>
+                <!-- formulario oculto inicialmente, es visible al pulsar el botón anterior -->
+                <form id="contactForm" style="display: none;" method="POST" action="php/portfolio.php">
+                    <!-- campos del formulario -->
+                    <input class="name" type="text" name="name" placeholder="Name" required>
+                    <input class="email" type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Message" required></textarea>
+                    <button class="submit" type="submit">Send</button>
+                </form>
             </div>
         </section>
 
