@@ -1,3 +1,16 @@
+/* -------------------- PARTE DE LAS SKILLS  -------------------- */
+// llamamos a los iconos y a la información de cada skill
+const skillIcons = document.querySelectorAll('.my_skills i');
+const infoBox = document.querySelectorAll('.my_skills .info');
+
+// addEventListener a cada icono para mostrarlos/ocultarlos
+skillIcons.forEach((icon, index) => {
+  icon.addEventListener('click', () => {
+    infoBox[index].classList.toggle('show'); // alternamos visibilidad de información cada vez que clicamos sobre un icono
+  });
+});
+
+
 /* -------------------- PARTE DEL FORMULARIO  -------------------- */
 // llamamos al botón y al formulario por el id
 const formButton = document.getElementById('formButton');

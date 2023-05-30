@@ -283,20 +283,36 @@ p {
     justify-content: center;
 }
 
-i:hover:nth-child(1){
+#about_me .about_me .my_info .skills .my_skills .skill1 i:hover {
     color: #e6842f;
 }
 
-i:hover:nth-child(2){
+#about_me .about_me .my_info .skills .my_skills .skill1 .info {
+    font-size: 1.4rem;
+}
+
+#about_me .about_me .my_info .skills .my_skills .skill2 i:hover {
     color: #5489c5;
 }
 
-.skills i:hover:nth-child(3){
-    color: #ea3b3b;
+#about_me .about_me .my_info .skills .my_skills .skill2 .info {
+    font-size: 1.4rem;
 }
 
-.skills i:hover:nth-child(4){
-    color: #ff8400;
+#about_me .about_me .my_info .skills .my_skills .skill3 i:hover {
+    color: #ff0606;
+}
+
+#about_me .about_me .my_info .skills .my_skills .skill3 .info {
+    font-size: 1.4rem;
+}
+
+#about_me .about_me .my_info .skills .my_skills .skill4 i:hover {
+    color: #ff7700;
+}
+
+#about_me .about_me .my_info .skills .my_skills .skill4 .info {
+    font-size: 1.4rem;
 }
 
 
@@ -792,4 +808,14 @@ i:hover:nth-child(2){
 
 #contactForm button[type="submit"]:hover {
     background-color: rgba(144, 241, 209, 0.874);
+}
+
+
+/* -------------------- PARTE DE LAS SKILLS OCULTA  -------------------- */
+.skills .info {
+    display: none;
+}
+  
+.skills .info.show { /* seleccionamos todos los elementos .info del div="skills" */
+    display: block;
 }
