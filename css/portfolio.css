@@ -766,8 +766,8 @@ i:hover:nth-child(2){
     box-shadow: 0px 0px 18px 0 #0000002c;
 }
 
-#contactForm input .name,
-#contactForm input .email,
+#contactForm input[type="text"],
+#contactForm input[type="email"],
 #contactForm textarea {
     width: 100%;
     padding: 10px;
@@ -781,7 +781,7 @@ i:hover:nth-child(2){
     height: 150px;
 }
 
-#contactForm button .submit {
+#contactForm button[type="submit"] {
     background-color: rgba(144, 241, 209, 0.874);
     color: white;
     padding: 10px 20px;
@@ -790,6 +790,6 @@ i:hover:nth-child(2){
     cursor: pointer;
 }
 
-#contactForm button .submit:hover {
+#contactForm button[type="submit"]:hover {
     background-color: rgba(144, 241, 209, 0.874);
 }
